@@ -1,0 +1,24 @@
+﻿@model PasswordViewModel 
+@{
+}
+<form method="post" action="~/Password/GeneratePassword"> 
+   <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Password Length</label>
+    <input asp-for="PasswordLength" class="form-control" placeholder="Enter a number for the length">
+  </div>
+
+   <div class="mb-3">
+     <label for="UseSpecialCharacters" class="form-label">Use special characters?</label>
+     <input asp-for="UseSpecialCharacters">
+  </div>
+
+   <div class="mb-3">
+     <label for="UseCapitalLetter" class="form-label">Use capital letters?</label>
+     <input asp-for="UseCapitalLetter">
+  </div>
+
+   <button type = "submit" class = "btn btn-primary"> Do The Magic!   </button>
+</form>
+<div class="text-center">
+    <H2><strong>@Model.PasswordResult</strong></H2>
+</div>
